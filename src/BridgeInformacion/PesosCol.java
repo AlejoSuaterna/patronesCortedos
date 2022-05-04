@@ -8,12 +8,12 @@ public class PesosCol extends MonedasConver{
 
     @Override
     public double Dolares() {
-        return precio*4000;        
+        return precio*0.004;        
     }
 
     @Override
     public double Euros() {
-        return precio*4200;
+        return precio*0.024;
         // TODO Auto-generated method stub
         
     }
