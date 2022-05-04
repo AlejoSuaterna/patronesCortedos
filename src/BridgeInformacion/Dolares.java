@@ -22,7 +22,7 @@ public class Dolares extends MonedasConver {
     @Override
     public double Yenes() {
         // TODO Auto-generated method stub
-        return 0;
+        return precio*129.13;
     }
 
     @Override
