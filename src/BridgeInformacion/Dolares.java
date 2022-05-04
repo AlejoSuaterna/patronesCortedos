@@ -10,7 +10,7 @@ public class Dolares extends MonedasConver {
     @Override
     public double Dolares() {
         // TODO Auto-generated method stub
-        return 0;
+        return precio;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Dolares extends MonedasConver {
     @Override
     public double PesosCol() {
         // TODO Auto-generated method stub
-        return 0;
+        return precio*4000;
     }
     
 }
