@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 public abstract class Algorithm {
 
     public void templateMethod() {
-        getValores();
+        getValores(Depurar(IngresarLink(IngreseBusqueda())));
     }
 
     public String IngreseBusqueda() {
@@ -26,12 +26,12 @@ public abstract class Algorithm {
         return newNombre;
     }
 
-    public abstract String IngresarLink();
+    public abstract String IngresarLink(String busqueda);
 
-    public abstract String Depurar();
+    public abstract String Depurar(String link);
 
-    public String getValores() {
-        String palabra[] = Depurar().split(" - ");
+    public String getValores(String informacion) {
+        String palabra[] = informacion.split(" - ");
         System.out.println("Nombre: " + palabra[0] + "\nPrecio: " + palabra[1]);
         return palabra[1];
     }
