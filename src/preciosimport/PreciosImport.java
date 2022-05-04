@@ -5,8 +5,6 @@
 package preciosimport;
 
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,7 +14,6 @@ import org.jsoup.select.Elements;
  *
  * @author hugoa
  */
-
 public class PreciosImport {
 
     /**
@@ -24,7 +21,7 @@ public class PreciosImport {
      */
     public static void main(String[] args) {
         PreciosImport p = new PreciosImport();
-        p.scraping(p.palabras("Samgung S9"));
+        p.scraping(p.palabras("Samgung S20"));
     }
 
     public Document getHTML(String url) {
@@ -37,29 +34,28 @@ public class PreciosImport {
         return html;
     }
 
-    public void scraping(String[] busqueda) {
-        
-        Elements cel = getHTML("https://www.amazon.ca/s?k="+busqueda[0]+"+"+busqueda[1]+"&rh=n%3A3379583011&ref=nb_sb_noss").getElementsByClass("sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20");
+    public String scraping(String busqueda) {
+        Elements cel = getHTML("https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=" + busqueda + "&_sacat=0&LH_TitleDesc=0&loc=1003659&sitelnk=&poi=&cmpgn=6485254487&rlsatarget=kwd-332279276825&geo_id=&network=g&gclid=CjwKCAjwgr6TBhAGEiwA3aVuISDnNrlwemQEaL6YQYu37p2-XVKWy8DNAV1dft5IueqsUCf81tlh_RoC36MQAvD_BwE&mkcid=2&_odkw=e+bay+motors.com&norover=1&MT_ID=&adpos=&adgroupid=78211154059&matchtype=b&abcId=&keyword=e+bay+motors.com&mkrid=711-163588-2056-0&crlp=496209240863_&device=c")
+                .getElementsByClass("s-item s-item__pl-on-bottom");
         System.out.println(cel.size());
-        System.out.println(cel.get(0).getElementsByClass("a-size-medium a-color-base a-text-normal").text());
-        /*                .select("div.pf-finder-v2_box pf-finder-v2_box-view js-pf-product-card tr");
-        System.out.println(articulos.size());
-        for(Element celulares:articulos){
-            try{
-                String urlCel=celulares.select("a.cta cta--outlined cta--black").attr("abs:href");
-                Document htmlCel=getHTML(urlCel);
-                
-                String nombre= htmlCel.select("h2").text();
-                System.out.println(nombre);
-            }catch(Exception e){
-                System.out.println(e.getMessage());
+        String nombre = "\nNombre: " + cel.get(1).getElementsByClass("s-item__link").get(0).getElementsByClass("s-item__title").text();
+        String precio = "\nPrecio: " + cel.get(1).getElementsByClass("s-item__price").text();
+        System.out.println(nombre + precio);
+        return precio;
+    }
+
+    public String palabras(String p) {
+        String palabraSep[] = p.split(" ");
+        String newNombre = "";
+        int c = 0;
+        for (String s : palabraSep) {
+            newNombre += s;
+            c++;
+            if (c < palabraSep.length) {
+                newNombre += "+";
             }
         }
-         */
-    }
-    
-    public String[] palabras(String p){
-        String palabraSep[]=p.split(" ");
-        return palabraSep;
+        System.out.println(newNombre);
+        return newNombre;
     }
 }
