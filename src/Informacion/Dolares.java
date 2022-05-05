@@ -1,8 +1,10 @@
-package BridgeInformacion;
+package Informacion;
+
+import TemplateWebScrap.Algorithm;
 
 public class Dolares extends MonedasConver {
 
-    public Dolares(double precio) {
+    public Dolares(Algorithm precio) {
         super(precio);
         //TODO Auto-generated constructor stub
     }
@@ -10,25 +12,25 @@ public class Dolares extends MonedasConver {
     @Override
     public double Dolares() {
         // TODO Auto-generated method stub
-        return precio;
+        return precio.templateMethod();
     }
 
     @Override
     public double Euros() {
         // TODO Auto-generated method stub
-        return 0;
+        return precio.templateMethod()*0.94;
     }
 
     @Override
     public double Yenes() {
         // TODO Auto-generated method stub
-        return precio*129.13;
+        return precio.templateMethod()*129.13;
     }
 
     @Override
     public double PesosCol() {
         // TODO Auto-generated method stub
-        return precio*4000;
+        return precio.templateMethod()*4069.17;
     }
     
 }
