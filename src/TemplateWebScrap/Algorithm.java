@@ -10,7 +10,7 @@ public abstract class Algorithm {
 
     public double templateMethod(String[] palabraBusqueda) {
         return Double.parseDouble(getValores(Depurar(IngresarLink(IngreseBusqueda(palabraBusqueda)))));
-    }
+}
 
     public String IngreseBusqueda(String[] palabraSep) {
         String newNombre = "";
@@ -32,7 +32,7 @@ public abstract class Algorithm {
     public String getValores(String informacion) {
         String palabra[] = informacion.split(" - ");
         System.out.println("Nombre: " + palabra[0] + "\nPrecio: " + palabra[1]);
-        return palabra[1];
+        return palabra[1].replace("COP $", "").replace(" ", "");
     }
 
     public Document getHTML(String url) {
