@@ -7,14 +7,15 @@ import javax.swing.JOptionPane;
 import Informacion.Dolares;
 import Informacion.Euros;
 import Informacion.MonedasConver;
+import Informacion.PesosCol;
 import TemplateWebScrap.Algorithm;
 import TemplateWebScrap.WebEbay;
 
 public class Facode {
-    private MonedasConver webScrap;
     private ArrayList<MonedasConver> paginas;
 
     public void menu() {
+        paginas=new ArrayList<>();
         int op = 0, op2 = 0;
         String[] opciones = { "Tecnologica", "General" };
         String[] opciones2 = { "Euros", "Dolares", "PesosCol" };
@@ -25,14 +26,19 @@ public class Facode {
         String palabraSep[] = JOptionPane.showInputDialog(null, "Ingerese la busqueda: ").split(" ");
         switch (op2) {
             case 0:
-                paginas=new ArrayList<>();
-                paginas.add(new Euros(new  WebEbay(), palabraSep));
+                paginas.add(new PesosCol(new  WebEbay(), palabraSep));
+                if(op==1){
+                    //se pone la que sea solo de tecnologia, la del adapter
+                }
+                System.out.println("Precio Euros: "+paginas.get(0).Euros());
                 break;
             case 1:
-
+                paginas.add(new PesosCol(new WebEbay(), palabraSep));
+                System.out.println(paginas.get(0).Dolares());
                 break;
             case 2:
-
+                paginas.add(new PesosCol(new WebEbay(), palabraSep));
+                System.out.println(paginas.get(0).PesosCol());
                 break;
         }
     }
