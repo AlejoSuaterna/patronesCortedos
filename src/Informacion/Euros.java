@@ -4,33 +4,35 @@ import TemplateWebScrap.Algorithm;
 
 public class Euros extends MonedasConver {
 
-    public Euros(Algorithm precio) {
-        super(precio);
+
+
+    public Euros(Algorithm precio, String[] busqueda) {
+        super(precio, busqueda);
         //TODO Auto-generated constructor stub
     }
 
     @Override
     public double Dolares() {
         
-        return precio.templateMethod()*1.06;
+        return precio.templateMethod(busqueda)*1.06;
     }
 
     @Override
     public double Euros() {
         // TODO Auto-generated method stub
-        return precio.templateMethod();
+        return precio.templateMethod(busqueda);
     }
 
     @Override
     public double Yenes() {
         // TODO Auto-generated method stub
-        return precio.templateMethod()*137.23;
+        return precio.templateMethod(busqueda)*137.23;
     }
 
     @Override
     public double PesosCol() {
         // TODO Auto-generated method stub
-        return precio.templateMethod()*4323;
+        return precio.templateMethod(busqueda)*4323;
     }
     
 }

@@ -1,13 +1,10 @@
 package Launcher;
 
-import TemplateWebScrap.Algorithm;
-import TemplateWebScrap.WebEbay;
-import TemplateWebScrap.WebMercadoLibreMX;
+import Facode.Facode;
 
 public class Launcher {
     public static void main(String[] args) {
-        Algorithm algo= new WebMercadoLibreMX();
-        algo.templateMethod();
-        
+        Facode menu= new Facode();
+        menu.menu();
     }
 }
