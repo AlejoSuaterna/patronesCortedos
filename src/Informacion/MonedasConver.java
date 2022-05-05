@@ -1,12 +1,14 @@
-package BridgeInformacion;
+package Informacion;
+
+import TemplateWebScrap.Algorithm;
 
 public abstract class MonedasConver {
-    public double precio;
+    protected Algorithm precio;
 
-    public MonedasConver(double precio) {
+
+    public MonedasConver(Algorithm precio) {
         this.precio = precio;
     }
-
     public abstract double Dolares();
 
     public abstract double Euros();

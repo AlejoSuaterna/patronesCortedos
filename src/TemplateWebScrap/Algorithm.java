@@ -8,8 +8,8 @@ import org.jsoup.nodes.Document;
 
 public abstract class Algorithm {
 
-    public void templateMethod() {
-        getValores(Depurar(IngresarLink(IngreseBusqueda())));
+    public double templateMethod() {
+        return Double.parseDouble(getValores(Depurar(IngresarLink(IngreseBusqueda()))));
     }
 
     public String IngreseBusqueda() {
