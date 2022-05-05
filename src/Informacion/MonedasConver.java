@@ -4,10 +4,11 @@ import TemplateWebScrap.Algorithm;
 
 public abstract class MonedasConver {
     protected Algorithm precio;
+    protected String[] busqueda;
 
-
-    public MonedasConver(Algorithm precio) {
+    public MonedasConver(Algorithm precio, String[] busqueda) {
         this.precio = precio;
+        this.busqueda=busqueda;
     }
     public abstract double Dolares();
 

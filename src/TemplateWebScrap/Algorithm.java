@@ -8,12 +8,11 @@ import org.jsoup.nodes.Document;
 
 public abstract class Algorithm {
 
-    public double templateMethod() {
-        return Double.parseDouble(getValores(Depurar(IngresarLink(IngreseBusqueda()))));
+    public double templateMethod(String[] palabraBusqueda) {
+        return Double.parseDouble(getValores(Depurar(IngresarLink(IngreseBusqueda(palabraBusqueda)))));
     }
 
-    public String IngreseBusqueda() {
-        String palabraSep[] = JOptionPane.showInputDialog(null, "Ingerese la busqueda: ").split(" ");
+    public String IngreseBusqueda(String[] palabraSep) {
         String newNombre = "";
         int c = 0;
         for (String s : palabraSep) {

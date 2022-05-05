@@ -4,26 +4,27 @@ import TemplateWebScrap.Algorithm;
 
 public class PesosCol extends MonedasConver{
 
-    public PesosCol(Algorithm precio) {
-        super(precio);
+
+    public PesosCol(Algorithm precio, String[] busqueda) {
+        super(precio, busqueda);
         //TODO Auto-generated constructor stub
     }
 
     @Override
     public double Dolares() {
-        return precio.templateMethod()*0.00025;        
+        return precio.templateMethod(busqueda)*0.00025;        
     }
 
     @Override
     public double Euros() {
-        return precio.templateMethod()*0.00024;
+        return precio.templateMethod(busqueda)*0.00024;
         // TODO Auto-generated method stub
         
     }
 
     @Override
     public double Yenes() {
-        return precio.templateMethod()*0.032;
+        return precio.templateMethod(busqueda)*0.032;
         // TODO Auto-generated method stub
         
     }
@@ -31,7 +32,7 @@ public class PesosCol extends MonedasConver{
     @Override
     public double PesosCol() {
         // TODO Auto-generated method stub
-        return precio.templateMethod();
+        return precio.templateMethod(busqueda);
     }
     
 }
