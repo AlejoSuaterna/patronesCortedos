@@ -7,18 +7,15 @@ public class Dolares extends MonedasConver {
 
     public Dolares(Algorithm precio, String[] busqueda) {
         super(precio, busqueda);
-        //TODO Auto-generated constructor stub
     }
 
     @Override
     public double Dolares() {
-        // TODO Auto-generated method stub
         return precio.templateMethod(busqueda);
     }
 
     @Override
     public double Euros() {
-        // TODO Auto-generated method stub
         return precio.templateMethod(busqueda)*0.94;
     }
 
