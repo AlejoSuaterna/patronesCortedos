@@ -9,6 +9,8 @@ import Informacion.Euros;
 import Informacion.MonedasConver;
 import Informacion.PesosCol;
 import TemplateWebScrap.Algorithm;
+import TemplateWebScrap.WebFlipkart;
+import TemplateWebScrap.WebOlx;
 import TemplateWebScrap.WebEbay;
 
 public class Facode {
@@ -26,7 +28,7 @@ public class Facode {
         String palabraSep[] = JOptionPane.showInputDialog(null, "Ingerese la busqueda: ").split(" ");
         switch (op2) {
             case 0:
-                paginas.add(new PesosCol(new  WebEbay(), palabraSep));
+                paginas.add(new PesosCol(new  WebFlipkart(), palabraSep));
                 if(op==1){
                     //se pone la que sea solo de tecnologia, la del adapter
                 }
