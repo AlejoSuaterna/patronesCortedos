@@ -28,7 +28,7 @@ public class Facode {
         String palabraSep[] = JOptionPane.showInputDialog(null, "Ingerese la busqueda: ").split(" ");
         switch (op2) {
             case 0:
-                paginas.add(new PesosCol(new  WebFlipkart(), palabraSep));
+                paginas.add(new PesosCol(new  WebOlx(), palabraSep));
                 if(op==1){
                     //se pone la que sea solo de tecnologia, la del adapter
                 }

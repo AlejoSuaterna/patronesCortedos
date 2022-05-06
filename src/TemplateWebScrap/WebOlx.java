@@ -23,10 +23,11 @@ public class WebOlx extends Algorithm {
         Elements cel = getHTML(link)
                 .getElementsByClass("EIR5N");
         String nombre = cel.get(1).getElementsByClass("IKo3_").get(0).getElementsByClass("_2tW1I").text();
-        System.out.println(nombre);
         String precio = cel.get(1).getElementsByClass("_89yzn").text();
+        precio = precio.replace(".", " ");
+        precio = "COP " + precio;
         System.out.println(precio);
-        return nombre+" - "+precio;
+        return nombre + " - " + precio;
     }
-   
+
 }
