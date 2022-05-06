@@ -15,7 +15,7 @@ public class WebEbay extends Algorithm {
         Elements cel = getHTML(link)
                 .getElementsByClass("s-item s-item__pl-on-bottom");
         String nombre = cel.get(1).getElementsByClass("s-item__link").get(0).getElementsByClass("s-item__title").text();
-        String precio = cel.get(1).getElementsByClass("s-item__price").text();       
+        String precio = cel.get(1).getElementsByClass("s-item__price").text(); 
         return nombre+" - "+precio;
     }
 
