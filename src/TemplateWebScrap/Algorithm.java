@@ -2,7 +2,6 @@ package TemplateWebScrap;
 
 import java.io.IOException;
 
-import javax.swing.JOptionPane;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -10,7 +9,7 @@ public abstract class Algorithm {
 
     public double templateMethod(String[] palabraBusqueda) {
         return Double.parseDouble(getValores(Depurar(IngresarLink(IngreseBusqueda(palabraBusqueda)))));
-}
+    }
 
     public String IngreseBusqueda(String[] palabraSep) {
         String newNombre = "";
