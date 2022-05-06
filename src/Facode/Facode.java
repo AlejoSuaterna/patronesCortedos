@@ -1,15 +1,11 @@
 package Facode;
 
 import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
-
-import Informacion.Dolares;
-import Informacion.Euros;
 import Informacion.MonedasConver;
 import Informacion.PesosCol;
-import TemplateWebScrap.Algorithm;
 import TemplateWebScrap.WebEbay;
+import TemplateWebScrap.WebLinio;
 
 public class Facode {
     private ArrayList<MonedasConver> paginas;
@@ -26,7 +22,7 @@ public class Facode {
         String palabraSep[] = JOptionPane.showInputDialog(null, "Ingerese la busqueda: ").split(" ");
         switch (op2) {
             case 0:
-                paginas.add(new PesosCol(new  WebEbay(), palabraSep));
+                paginas.add(new PesosCol(new  WebLinio(), palabraSep));
                 if(op==1){
                     //se pone la que sea solo de tecnologia, la del adapter
                 }

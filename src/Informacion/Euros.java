@@ -5,7 +5,6 @@ import TemplateWebScrap.Algorithm;
 public class Euros extends MonedasConver {
 
 
-
     public Euros(Algorithm precio, String[] busqueda) {
         super(precio, busqueda);
         //TODO Auto-generated constructor stub

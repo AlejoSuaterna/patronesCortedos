@@ -8,7 +8,7 @@ public abstract class MonedasConver {
 
     public MonedasConver(Algorithm precio, String[] busqueda) {
         this.precio = precio;
-        this.busqueda=busqueda;
+        this.busqueda = busqueda;
     }
     public abstract double Dolares();
 
