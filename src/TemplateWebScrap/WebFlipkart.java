@@ -26,6 +26,12 @@ public class WebFlipkart extends Algorithm {
         System.out.println(nombre);
         String precio = cel.get(1).getElementsByClass("_30jeq3 _1_WHN1").text();
         System.out.println(precio);
+        precio = precio.replace("₹", "").replace(",", "");
+        Float precio2 = Float.valueOf(precio);
+        precio2 = (precio2 * 53);
+        precio = Float.toString(precio2);
+        precio = "COP $" + precio;
+        System.out.println(precio);
         return nombre + " - " + precio;
     }
 
