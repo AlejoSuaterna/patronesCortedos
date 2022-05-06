@@ -34,5 +34,10 @@ public class PesosCol extends MonedasConver{
         // TODO Auto-generated method stub
         return precio.templateMethod(busqueda);
     }
+
+    @Override
+    public double Rupias() {
+        return precio.templateMethod(busqueda)+0.019;
+    }
     
 }

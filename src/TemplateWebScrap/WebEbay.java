@@ -1,5 +1,6 @@
 package TemplateWebScrap;
 
+import java.io.IOException;
 import org.jsoup.select.Elements;
 
 public class WebEbay extends Algorithm {
@@ -11,11 +12,14 @@ public class WebEbay extends Algorithm {
     }
 
     @Override
-    public String Depurar(String link) {
+    public String Depurar(String link){
         Elements cel = getHTML(link).getElementsByClass("s-item s-item__pl-on-bottom");
         String nombre = cel.get(1).getElementsByClass("s-item__link").get(0).getElementsByClass("s-item__title").text();
         String precio = cel.get(1).getElementsByClass("s-item__price").text(); 
-        return nombre+" - "+precio;
+        if(nombre.isEmpty()||precio.isEmpty()){
+            return "No hay el prducto - 1000000000";
+        }
+        return nombre+" - "+precio.replace("COP $", "").replace(" ", "");
     }
 
 }

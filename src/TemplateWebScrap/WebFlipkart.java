@@ -25,10 +25,12 @@ public class WebFlipkart extends Algorithm {
         String nombre = cel.get(1).getElementsByClass("_3pLy-c row").get(0).getElementsByClass("_4rR01T").text();
         String precio = cel.get(1).getElementsByClass("_30jeq3 _1_WHN1").text();
         precio = precio.replace("₹", "").replace(",", "");
+        if (nombre.isEmpty() || precio.isEmpty()) {
+            return "No hay el prducto - 1000000000";
+        }
         Float precio2 = Float.valueOf(precio);
         precio2 = (precio2 * 53);
         precio = Float.toString(precio2);
-        precio = "COP $" + precio;
         return nombre + " - " + precio;
     }
 

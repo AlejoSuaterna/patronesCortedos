@@ -33,5 +33,10 @@ public class Dolares extends MonedasConver {
         // TODO Auto-generated method stub
         return precio.templateMethod(busqueda)*4069.17;
     }
+
+    @Override
+    public double Rupias() {
+        return precio.templateMethod(busqueda)*76.93;
+    }
     
 }

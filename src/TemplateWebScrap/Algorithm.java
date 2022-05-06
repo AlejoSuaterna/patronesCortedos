@@ -31,7 +31,7 @@ public abstract class Algorithm {
     public String getValores(String informacion) {
         String palabra[] = informacion.split(" - ");
         System.out.println("Nombre: " + palabra[0] + "\nPrecio: " + palabra[1]);
-        return palabra[1].replace("COP $", "").replace(" ", "");
+        return palabra[1];
     }
 
     public Document getHTML(String url) {

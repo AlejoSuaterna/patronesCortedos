@@ -24,9 +24,10 @@ public class WebOlx extends Algorithm {
                 .getElementsByClass("EIR5N");
         String nombre = cel.get(1).getElementsByClass("IKo3_").get(0).getElementsByClass("_2tW1I").text();
         String precio = cel.get(1).getElementsByClass("_89yzn").text();
-        precio = precio.replace(".", " ");
-        precio = "COP " + precio;
-        System.out.println(precio);
+        if (nombre.isEmpty() || precio.isEmpty()) {
+            return "No hay el prducto - 1000000000";
+        }
+        precio = precio.replace(".", " ").replace("$","").replace(" ", "");
         return nombre + " - " + precio;
     }
 

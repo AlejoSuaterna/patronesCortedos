@@ -33,5 +33,12 @@ public class Euros extends MonedasConver {
         // TODO Auto-generated method stub
         return precio.templateMethod(busqueda)*0.00023;
     }
+
+    @Override
+    public double Rupias() {
+        return precio.templateMethod(busqueda)*81.45;
+    }
+    
+    
     
 }
