@@ -31,7 +31,7 @@ public class Euros extends MonedasConver {
     @Override
     public double PesosCol() {
         // TODO Auto-generated method stub
-        return precio.templateMethod(busqueda)*4323;
+        return precio.templateMethod(busqueda)*0.00023;
     }
     
 }

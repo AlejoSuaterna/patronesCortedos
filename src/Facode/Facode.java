@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Informacion.MonedasConver;
 import Informacion.PesosCol;
+import TemplateWebScrap.Algorithm;
+import TemplateWebScrap.WebAliExpress;
 import TemplateWebScrap.WebAlkosto;
 import TemplateWebScrap.WebEbay;
 
