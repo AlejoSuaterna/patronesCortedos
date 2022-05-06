@@ -1,15 +1,12 @@
 package Facode;
 
 import java.util.ArrayList;
-
 import javax.swing.JOptionPane;
-
-import Informacion.Dolares;
-import Informacion.Euros;
 import Informacion.MonedasConver;
 import Informacion.PesosCol;
 import TemplateWebScrap.Algorithm;
 import TemplateWebScrap.WebAliExpress;
+import TemplateWebScrap.WebAlkosto;
 import TemplateWebScrap.WebEbay;
 
 public class Facode {
@@ -34,11 +31,11 @@ public class Facode {
                 System.out.println("Precio Euros: "+paginas.get(0).Euros());
                 break;
             case 1:
-                paginas.add(new PesosCol(new WebEbay(), palabraSep));
+                paginas.add(new PesosCol(new WebAlkosto(), palabraSep));
                 System.out.println(paginas.get(0).Dolares());
                 break;
             case 2:
-                paginas.add(new PesosCol(new WebEbay(), palabraSep));
+                paginas.add(new PesosCol(new WebAlkosto(), palabraSep));
                 System.out.println(paginas.get(0).PesosCol());
                 break;
         }
